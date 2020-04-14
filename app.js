@@ -92,7 +92,7 @@ var server = http.createServer((req, res) => {
 				var type = imagename.substring(imagename.indexOf("."));
 				var contenttype = "image/"+type.substring(1);
 				if(/^./.test(type)) {
-					fs.readFile(("./image/"+imagename), function(erro,data2) {
+					fs.readFile(("../image/"+imagename), function(erro,data2) {
 						if(erro) {
 							res.writeHead(404, {'Content-Type':'text/plain'});
 							res.end("Image not found");

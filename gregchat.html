@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0030)http://gregoryt.mooo.com/chat? -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 	<title>
 		Gregchat Chat Page
@@ -138,7 +137,7 @@
 			align-items: flex-start;
 			padding-top: 20px;
 			overflow-y: auto;
-				overflow-x hidden;
+			overflow-x: hidden;
 			position: default;
 			max-height: 100%;
 			
@@ -305,7 +304,7 @@
 				z-index: 10;
 		}
 		a {
-			color: #EAFFF5
+			color: #EAFFF5;
 			font-size: 17px;
 
 		}
@@ -334,8 +333,8 @@
 			}
 			.dot {
 				background-color: transparent;
-				border: 0px solid transpearent:
-					box-shadow: none;
+				border: 0px solid transparent;
+				box-shadow: none;
 				z-index: -100;
 			}
 			.webapp {
@@ -351,8 +350,16 @@
 			                padding-right: 15px;
 		                font-size: 20px;
 		 }
+		 .link3 {
+			 padding: 3px;
+			 padding-right: 10px;
+		 }
 	</style>
 	<style media="" id="menuu">
+				 .link2 {
+			 display:none;
+		 }
+
 		.menuitem {
 			display: none;
 		}
@@ -447,13 +454,40 @@
 	<div class="topbar"></div>
 	<div class="content">
 		<div class="menubar">
-			<div class="titlebar"><i class="fas fa-bars" id="barz"></i><h1 class="title">Gregchat<i class="fas fa-times" aria-hidden="true" id="ex"></i></h1></div>
+			<div class="titlebar"><i class="fas fa-bars" id="barz" aria-hidden="true"></i><h1 class="title">Gregchat<i class="fas fa-times" aria-hidden="true" id="ex"></i></h1></div>
 			<div class="userbar">
 				<div id="usertext">users online</div>
-				<div id="usercount">2</div>
+				<div id="usercount">3</div>
 				
-			</div>
+</div>
+<div class="userbar link2" style="display: flex;height: 80%;bottom: 0;position: fixed;flex-direction: column;justify-content: flex-end; width: inherit;padding-left:10px; background-color: transparent;">
+			<div id="githublink" style="
+			font-size: 10px;
+			
+			padding-bottom: 5px;
+			width: 100%;
+			">
+		<a href="https://github.com/devalidating/gregchat" style="
+			font-size: 150%; padding-right: 10px;
+		" class="link2 link3">Github
+		</a>
+		<a href="https://github.com/devalidating/gregchat" style="
+			font-size: 150%; padding-right: 10px;
+		" class="link2 link3">Main Page
+		</a></div>
+		<div id="copyright" class="link2" style="
+			font-size: 80%;
+			padding-left: 1%;
+			padding-bottom: 5px;
+		"> &copy; 2020 Gregory Thompson</div>
+
+
+						
+						
+		</div>
+
 			<div class="menuitem" id="un"><div id="usernametitle">Nickname:</div><input id="usernamefield" placeholder="enter name here"></div>
+			
 		</div>
 		<div class="webapp">
 			<div id="bottom">

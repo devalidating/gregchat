@@ -7,7 +7,7 @@ const cookieparse = require('cookie-parser');
 const formidable = require('formidable');
 const pagemanifest = {
 	'404' : './404.html',
-	'/' : './index.html',
+	'/' : './gregchat.html',
 	'/index.html' : './index.html',
 	'/art' : './artpage.html',
 	'/chat' : './gregchat.html',

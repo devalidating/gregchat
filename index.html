@@ -1,0 +1,166 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255,255,255);
+}
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  height: 500px;
+  text-align: center;
+  background-image: url(https://i.ibb.co/R0mkJnm/IMG-1234.jpg);
+
+  background-position: 50% 45%;
+    background-size: 100%;
+
+}
+
+.header {
+  padding: 10px 0px;
+    position:absolute;
+  background: #555;
+  color: #f1f1f1;
+    width: 100%;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.headercont {
+	padding: 0px 10px;
+	color: white;
+}
+.link {
+	float: right;
+	padding: 10px;
+}
+.content {
+	padding-top: 102px;
+	margin-left:10%;
+	margin-right:10%;
+}
+.sticky + .content {
+  padding-top: 102px;
+}
+.footer {
+	padding-top: 30px;
+	text-align:center;
+	background-color:#F2EFE5;
+	float:bottom;
+	position: absolute;
+	width: 100%;
+	color: #5B5A58;
+}
+#tris {
+	width: 100%;
+	height: 600px;
+	background-color: red;
+	clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+	background-image: url(https://images.unsplash.com/photo-1488590528505-98d2b5aba04b);
+	background-size: 100%;
+}
+#myHeader {
+	background-image: linear-gradient(rgba(25,25,25,0.6), rgba(25,25,25,0));
+	height: 10%;
+	text-shadow:2px 2px 5px #21211F
+}
+.button {
+	margin: 10px;
+	margin-top: 16px;
+	background-color: transparent;
+	border: 2px solid transparent;
+	text-align: center;
+	text-decoration: none;
+	float: right;
+	color:white;
+	font-size: 16px;
+	transition-duration: 0.4s;
+	border-radius: 50px;
+	
+}
+
+.button:hover {
+	border: 2px solid rgba(255,255,255,0.5);
+}
+
+.button:focus {
+	outline: 0;
+	border: 3px solid white;
+}
+.slideshow {
+	position: absolute;
+	margin-top: 100px;
+	right: 35%;
+	
+}
+</style>	
+</head>
+<body>
+
+<div class="top-container">
+	<div style="margin-top:250px;color:white;  filter: blur(0px);
+  -webkit-filter: blur(0px);text-shadow:3px 3px 5px #21211F">
+	<h1>I'm Gregory Thompson</h1>
+	<p id="label" 	style="margin-top: 50px;font-size:0px;">and this is my website</p>
+	</div>
+</div>
+
+<div class="content">
+  <h3>My Name's Greg.</h3>
+	<p>Or Gregory. Or GT. Or whatever floats your boat. This is normally the point where I would write some highfalutin bioraphical novela, but I've written about one too many college essays for that to be fun. So I'll forgoe it. Just know that I'm a human and you're pretty cool.</p>
+	<p>As of writing this, I'm in the middle of slapping this site together. A little AWS here, little CSS there, throw in some Node.js to make it all run and I should have something midly acceptable. It's my first site, so don't judge too hard.</p>
+	<br>
+  <h3>You Like It?</h3>
+	<p>I sure hope you do. Because that makes at least one of us. The idea is you scroll down to see more content and press the buttons up top to see different pages. Revolutionary, I know. The Backend is a mess. Ideally, I would set up some template system for pages and pull the text from a database. It would be easy, dynamic and pretty sweet. It wouldn't make a difference to you, of course, because the end result is the same. But all that takes effort, and effort is a scarce commodity. So this is the way it is going to be for now.</p>
+	<p>At This point, I hope you've realized I'm just putting in filler text. This site looks considerably better when the border between the image at top and the image below is bigger than 10 pixels apart. So I'm just trying to write some stuff for volume. So here is some good old classic Lorem Ipsum text.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>I don't know what that means. i've hard its nonsense, but since I don't speak latin it could all be a "if your hand is bigger than your face it means your gullible" situation.</p>
+	<br>
+	<br>
+  </div>
+<div id="tris">
+	<div class="slideshow">
+	</div>
+</div>
+<div class="content">
+	<h3>Glad You're Still With Us!</h3>
+	<p>Or Me. Like the non-rectangular image border? Fancy Shmancy.</p>
+	<br>
+	<h3>Yea, this home landing page is done for now</h3>
+	<p>Relax, enjoy the rest of the site, or leave (whatever you want). I think this is some of the most filler text I've created in a while</p>
+	<br>
+
+</div>
+<div class="sticky" id="myHeader">
+  <h2 class="headercont" style="float:left;">Gregory Thompson</h2>
+	<div class="headercont" id="links" style="float:right;text-align:right;margin-right:0px;">
+		<div>
+			<button class="button link">Art</button> 
+			<button class="button link">Cool Stuff</button> 
+			<button class="button link">Projects</button>
+			<button class="button link">Home</button>			
+			
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<p>This is my website, thanks for reading.</p>
+	<p>It's just a fun project, hosted with AWS and run through Node.js</p>
+</div>
+
+<script>window.onscroll = function() {myFunction()};
+function myFunction() {if(window.pageYOffset<=150){document.getElementById("label").style.fontSize=window.pageYOffset/2+"px"}};
+</script>
+
+
+</body></html>

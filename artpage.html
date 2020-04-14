@@ -1,0 +1,312 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255,255,255);
+}
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  height: 500px;
+  text-align: center;
+  background-image: url(http://gregoryt.mooo.com/img?i=jbuzu.jpeg);
+
+  background-position: 50% 45%;
+    background-size: 100%;
+
+}
+
+.header {
+  padding: 10px 0px;
+    position:absolute;
+  background: #555;
+  color: #f1f1f1;
+    width: 100%;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.headercont {
+	padding: 0px 10px;
+	color: white;
+}
+.link {
+	float: right;
+	padding: 10px;
+}
+.content {
+	padding-top: 102px;
+	margin-left:10%;
+	margin-right:10%;
+}
+.sticky + .content {
+  padding-top: 102px;
+}
+.footer {
+	padding-top: 30px;
+	text-align:center;
+	background-color:#F2EFE5;
+	float:bottom;
+	position: absolute;
+	width: 100%;
+	color: #5B5A58;
+}
+#tris {
+	width: 100%;
+	height: 2000px;
+	background-color: rgb(30,30,30);
+	clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+	/*background-image: url(https://ebin.files.wordpress.com/2007/03/wallpaper-cf2-1440x900.png);*/
+	background-size: 100%;
+}
+#myHeader {
+	background-image: linear-gradient(rgba(25,25,25,0.6), rgba(25,25,25,0));
+	height: 10%;
+	text-shadow:2px 2px 5px #21211F
+}
+.button {
+	margin: 10px;
+	margin-top: 16px;
+	background-color: transparent;
+	border: 2px solid transparent;
+	text-align: center;
+	text-decoration: none;
+	float: right;
+	color:white;
+	font-size: 16px;
+	transition-duration: 0.4s;
+	border-radius: 50px;
+	
+}
+
+.button:hover {
+	border: 2px solid rgba(255,255,255,0.5);
+}
+
+.button:focus {
+	outline: 0;
+	border: 3px solid white;
+}
+.slideshow {
+	position: absolute;
+	margin-top: 100px;
+	
+	
+}
+#port{
+	padding-top:10%;
+	padding-left: 20px;
+	padding-right: 20px;
+	  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+.column {
+	  flex: 32%;
+	max-width: 32%;
+	padding: 0 4px;
+	transition: 0.5s;
+}
+.column.focus {
+	flex: 50%;
+	max-width: 50%;
+	transition: 0.5s;
+}
+.column.defocus {
+	flex: 24%;
+	max-width: 24%;
+	transition: 0.5s;
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  transition: 0.5s;
+}
+.img.focus {
+	margin-bottom: 50px;
+	transition: 0.5s;
+	width: 100%;
+}
+.img.defocus {
+	trasnition: 0.5s;
+	width: 50%;
+	margin-bottom:0px;
+}
+#portfolio {
+	font-size: 100px;
+	color: white;
+	text-align: right;
+	margin-top:10px;
+}
+#portcontain {
+	padding-top: 10%;
+	padding-bottom: 30px;
+}
+.desc
+{
+	font-size:0px;
+	color: transparent;
+	margin-top:-50px;
+	margin-bottom: 50px;
+}
+.desc.focus {
+	font-size: 20px;
+	color:white;
+	transition:0.6s;
+	margin-bottom: 25px;
+}
+
+</style>	
+</head>
+<body>
+
+<div class="top-container">
+	<div style="margin-top:250px;color:white;  filter: blur(0px);
+  -webkit-filter: blur(0px);text-shadow:3px 3px 5px #21211F">
+	<h1>I'm Gregory Thompson</h1>
+	<p id="label" 	style="margin-top: 50px;font-size:0px;">and this is my website</p>
+	</div>
+</div>
+<div class="content" id="top">
+  <h3>About me</h3>
+	<p>As you already know, or at least can probably discern, I am Gregory Thompson. I was born and raised in the San Francisco Bay Area. Some of my interests are making things, video games, youtube, programming. Art also falls in there somewhere. I think I first got interested in art sometime in elementary school when I realized I could draw a whole lot better if I sort of sketched someting, rather than a  few montonic lines deliminating some sort of shape. As of writing this, I am most likely going to Cal Poly for an Electrical Engineering degree. So yea, that's me.</p>
+	<p>Below this biographical paragraph, there is a portfolio. Click on the images to reveal a description and zoom in. You might have to scroll a bit to see the whole thing. The portfolio works in Crhom and Safari, and should work in Firefox. Not sure aboubt other internet browsers.</p>
+	<br>
+	<br>
+
+  </div>
+<div id="tris">
+	<div id="portcontain">
+	<div id="portfolio">
+			Portfolio  &nbsp;&nbsp;&nbsp;&nbsp;
+	</div>
+	<div class="row"> 
+		
+		<div class="column">
+				<img id="-1" class="img" src='http://gregoryt.mooo.com/img?i=Gregory%20Thompson%20Mandala.png'><p class="desc">This is a mandala. I liked the strong contrast of a red-black-white color scheme and tried to accentuate that in its shape.</p>
+				<img class="img" src='http://gregoryt.mooo.com/img?i=GregThompsonArtShowPoster-1.jpg'><p class="desc">This is my poster for the San Mateo High School Art Show. I particulary like how a copius amount of transforms ended up mimicing paint strokes in the background.</p>
+		</div>
+		<div class="column">
+				<img class="img" src='http://gregoryt.mooo.com/img?i=GregoryThompson%20Surrealism.jpg'><p class="desc">This is was my project for surrealism. I tried to make a floating island feel like it came out of somewhere, almost like it should have been in the lake below.</p>
+				<img class="img" src='http://gregoryt.mooo.com/img?i=Gregory%20Thompson%20Vector%20Portrait.png'><p class="desc">This is my Vector image slef portrait. I think the way I made vector shapes mimic the abtract shapes of cloth folds and shadow ened up really nicely. This one ended up on display.</p>
+				<img class="img" src='https://i.ibb.co/9rXxRQQ/Quote-Image-1.jpg'><p class="desc">This is my quote image. I tried to pair multiple fonts and still retian a degree of constiency. I heard the quote somehwere and it stuck with me.</p>
+		</div>
+		<div class="column">
+				<img class="img" src='https://i.ibb.co/F3Jy8mp/Gregory-Thompson-Career-Poster-page-001.jpg'><div class="desc">This is was my career reasrch project poster. I really think this looks great. It just ended up striking a good blaance between being useful/intuitive and also artisticly pleasing.</div>
+				<img class="img" src='http://gregoryt.mooo.com/img?i=oyekq.png'><div class="desc">This was my shoe deisgn project. I think the placment of the Golden Gate Bridge helped tie the whole thing together</div>
+		</div>
+		
+	</div>
+	</div>
+</div>
+<div class="content">
+	<h3 id="resoome">Resume</h3>
+	<p>Source document can be found <a href="https://docs.google.com/document/d/1jEUsbe53bRp9l9L-kQKhpdT8vb0yYbTZn0t4rcYakaA/edit#" target-"_blank">on google docs</a> if needed</p>
+	<div style="text-align: center;width: auto;position: static;margin-left:  -10%;margin-right: -10%">
+		<iframe src="http://gregoryt.mooo.com/artresume" style="width: 840px;height: 1300px; max-width: 100%;border: none;box-shadow: 2px 1px 5px grey;display: inline-block;"></iframe>
+	</div>
+</div>
+<div class="sticky" id="myHeader">
+  <h2 class="headercont" style="float:left;">Gregory Thompson</h2>
+	<div class="headercont" id="links" style="float:right;text-align:right;margin-right:0px;">
+		<div>
+			<button class="button link" onclick='Resume()'>Resume</button> 			
+			<button class="button link" onclick="Portfolio()">Portfolio</button> 
+			<button class="button link" onclick="AboutMe()">About Me</button>
+			<button class="button link" onclick="window.scroll({top:0,behavior:'smooth'});">Home</button> 			
+		</div>
+	</div>
+</div>
+<div class="footer" id="foot">
+	<p>This is my website, thanks for reading</p>
+	<p>&#169;  2020 Gregory Thompson</p>
+</div>
+
+<script>window.onscroll = function() {myFunction()};
+function myFunction() {if(window.pageYOffset<=150){document.getElementById("label").style.fontSize=window.pageYOffset/2+"px"}};	
+function scrollTo(input) {
+	window.scroll({
+  top: document.getElementById(input).getBoundingClientRect().top + window.scrollY-100,
+  behavior: 'smooth'
+});
+};
+
+function Resume(){scrollTo("resoome");};
+function Portfolio(){scrollTo("portfolio");};
+function AboutMe(){scrollTo("top");};
+const image = document.getElementById("-1");
+//image.addEventListener('click', _ => myFunc(image));
+toArray(image.parentElement.parentElement.children).forEach(pelement => toArray(pelement.children).forEach(element => setup(element)));
+var selected = null;
+function setup(element) {
+	if(element.classList.contains("img"))
+	{
+		element.addEventListener('click', _ => dorit(element));
+	}
+}
+function dorit(element)
+{
+	if(selected==element)
+	{	
+		deselect(element);
+		selected=null;
+	} else {
+		select(element);
+	}
+}
+function select(element)
+{
+	if(selected!=null) {deselect(selected);}
+	selected=element;
+	selected.nextElementSibling.classList.toggle('focus',true);
+	selected.nextElementSibling.classList.toggle('defocus',false);
+	element.parentElement.classList.toggle('focus');
+	toArray(element.parentElement.children).forEach(el => el.classList.toggle('defocus',true));
+	element.classList.toggle('defocus',false);
+	element.classList.toggle('focus',true);
+	toArray(element.parentElement.parentElement.children).forEach(el => el.classList.toggle('defocus',true));
+	element.parentElement.classList.toggle('defocus',false);
+	console.log('yeet');
+}	
+function deselectChildren(element)
+{
+	toArray(element.children).forEach(el => deselect(el));
+	
+}
+function deselect(element)
+{
+	element.classList.toggle('focus',false);
+	element.parentElement.classList.toggle('focus',false);
+	toArray(element.parentElement.children).forEach(el => el.classList.toggle('defocus',false));
+	toArray(element.parentElement.parentElement.children).forEach(el => el.classList.toggle('defocus',false));
+	element.nextElementSibling.classList.toggle('focus',false);
+	element.nextElementSibling.classList.toggle('defocus',true);
+	//console.log(element.nextElementSibling);
+}
+function toArray(obj) {
+  var array = [];
+  for (var i = obj.length >>> 0; i--;) { 
+    array[i] = obj[i];
+  }
+  return array;
+}
+</script>
+
+
+</body></html>

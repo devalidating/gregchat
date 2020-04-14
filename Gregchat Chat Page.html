@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://gregoryt.mooo.com/chat? -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>
+		Gregchat Chat Page
+	</title>
+	<link id="icono" rel="icon" href="http://gregoryt.mooo.com/chat/favicon.ico" type="image/png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="./Gregchat Chat Page_files/7621de5623.js.download" crossorigin="anonymous"></script><link href="./Gregchat Chat Page_files/free-v4-shims.min.css" media="all" rel="stylesheet"><link href="./Gregchat Chat Page_files/free-v4-font-face.min.css" media="all" rel="stylesheet"><link href="./Gregchat Chat Page_files/free.min.css" media="all" rel="stylesheet">
+	<style>	
+
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: rgb(255,255,255);
+			height: 100%;
+		}
+		html,body { height:100%; }
+		.content {
+			width: 100%;
+			height:100%;
+			display: flex;
+			align-items: stretch;
+			position: absolute;
+		}
+		.menubar {
+			width: 20%;
+			height: auto;
+			background-color: #59AE84;
+		}
+		.webapp {
+			width: 80%;
+			
+			background-color: rgb(240,240,240);
+			box-shadow: -2px 0px 5px rgba(20,20,20,0.2);
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.title{
+			color: #9BE7C1;
+			margin-left: 10px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-top: 0px;
+			font-style: bold;
+			text-shadow: 2px 1px 5px rgba(10,10,10,0.2);
+			margin-bottom: 1px;
+		}
+		.titlebar {
+			background-color:#59A17E;
+			margin-top: 0px;
+			margin-bottom:0px;
+		}
+		.messagebox {
+			width: 99%;
+			height: 90%;
+			background-color: #E3E3E3;
+			margin-bottom: 10px;
+			display: flex;
+			flex-direction: column;
+			
+
+		}
+		.sendbox {
+			width: 100%;
+			height: 50px;
+			background-color: #E3E3E3;
+			margin-bottom: 10px;
+		}
+		.message {
+			margin: 20px;
+			margin-top: 4px;
+			margin-bottom: 4px;
+			color: white;
+			padding: 10px;
+			background-color: #59AE84;
+			display: inline-block;
+			box-sizing: border-box;
+			max-width: 600px;
+			border-radius: 7px 7px 7px 0px;
+			color: #EAFFF5;
+		}
+		.formed {
+			height: 100%;
+			width: 100%;
+		}
+		#bottom {
+			width: 99%;
+				display:flex;
+					justify-content: space-between;
+		}
+		.heart {
+			width: 50px;
+			background-color: #E3E3E3;
+			height: 50px;
+			margin-left: 5px;
+			padding-right: 0px;
+		}
+		.heart:hover {
+			background-image: linear-gradient(135deg, #E3E3E3, #CFCFCF);
+			background-color: red;
+				text-shadow: 2px 2px 5px rgba(10,10,10,0.4);
+		}
+		.heart:active {
+			text-shadow: none;
+			
+		}
+		.dot:active {
+			box-shadow: none;
+		}
+		.inp {
+			box-sizing: border-box;
+			height: 100%;
+			width: 100%;
+			padding: 0px 2%;
+			border: transparent;
+			background-color: transparent;
+			font-size: 20px;
+			padding-right: 45px;
+
+		}
+		.inp:focus {
+			outline: none;
+			border: 2px solid #59AE84;
+			z-index: -1;
+			background-color: rgba(250,250,250,0.1);
+		}
+		.messages {
+			margin-top: 2px;
+			margin-bottom: 5px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 20px;
+			overflow-y: auto;
+			position: default;
+			max-height: 100%;
+			
+		}
+		.userbar{
+			padding-top: 5px;
+			height:25px;
+			color: #9BE7C1;
+			background-color: #59A17E;
+			width: 100%;
+		}
+		#usertext {
+			float: right;
+				padding-right: 5px;
+		}
+		#usercount {
+			float: right;
+				padding-right: 5px;
+		}
+		.message.dupe {
+			margin-top: -9px;
+			
+		}
+		.small {
+			border-radius: 0px 0px 7px 0px;
+		}
+
+		.dot {
+		-webkit-appearance: none;
+			height: 32px;
+			width: 32px;
+		background-color: #59AE84;
+			border: 1px solid #59AE84;
+		border-radius: 50%;
+		display: inline-block;
+		float: right;
+		position: absolute;
+		box-shadow: 2px 2px 5px rgba(10,10,10,0.2);		
+		right: 64px;
+		bottom: 19px;
+		margin-left:4px;
+		margin-top:2px;
+		margin-right:4px;
+		text-align: left;
+		padding-left: 5px;
+		padding-top: 3px;
+		}
+		.dot:focus {
+			outline: none;
+		}
+		.love {
+			padding:5px; padding-left:20px;font-size: 35px;color:#59AE84;
+		}
+		@media only screen and (max-width: 800px) {
+			.menubar {
+				width:5%
+			}
+			.webapp {
+				width: 95%;
+			}
+			.title {
+				color: transparent;
+				text-shadow: none;
+			}
+			#usertext {
+				font-size: 0px;
+			}
+			#usercount {
+				float: left;
+					width: 100%;
+				padding-right: 0px;
+					text-align:center;
+			}
+			.dot {
+				background-color: transparent;
+				border: 0px solid transpearent:
+					box-shadow: none;
+				z-index: -100;
+			}
+		}
+		.message.self {
+			float:right;
+			align-self: flex-end;
+			border-radius: 7px 7px 0px 7px;
+		}
+		.message.self.small {
+		    border-radius: 0px 0px 0px 7px;
+		}
+		.menuitem {
+			margin: 10px;
+			margin-top: 20px;
+			color: #9BE7C1;
+		}
+		#usernamefield {
+			background-color: #59A17E;
+			border: 1px solid #59A17E;
+			color: #9BE7C1;
+			padding:2px;
+			width: 90%;
+			padding-left: 10px;
+			border-radius: 4px;
+			box-shadow: inset 0px 0px 5px rgba(10,10,10,0.05);
+			outline-color: #71c39a;
+			
+		}
+		#usernamefield::placeholder {
+			color: #9BE7C1;
+			opacity: 0.9;
+			font-style: italic;
+		}
+		#usernametitle {
+			padding-left: 10px;
+			text-shadow: 2px 1px 5px rgba(10,10,10,0.2);
+		}
+		#un {
+			margin-bottom: 40px;
+		}
+		#notifications {
+			border-top: 2px solid #59A17E;
+			height: 100px;
+			padding-top: 15px;
+		}
+		.note {
+			height: 100px;
+			background-color:#62b88d;
+			box-shadow: 0px 0px 5px rgba(10,10,10,0.1);
+		}
+		.closenote {
+			float: right;
+		} /*#72c69c*/
+		.notetop {
+			height: 18px;
+			padding-left: 5px;
+			box-shadow: 0px 0px 5px rgba(10,10,10,0.1);
+			text-shadow: 2px 1px 5px rgba(10,10,10,0.2);
+			padding-bottom: 2px;
+		}
+		.closenote {
+			margin: 1%;
+			height: 15px;
+			width: 15px;
+			background-color: #72c69c;
+			border: 0px solid transparent;
+		}
+	</style>
+</head>
+<body>
+	<div class="topbar"></div>
+	<div class="content">
+		<div class="menubar">
+			<div class="titlebar"><h1 class="title">Gregchat</h1></div>
+			<div class="userbar">
+				<div id="usertext">users online</div>
+				<div id="usercount">2</div>
+				
+			</div>
+			<div class="menuitem" id="un"><div id="usernametitle">Nickname:</div><input id="usernamefield" placeholder="enter name here"></div>
+			<div class="menuitem" id="notifications"><div class="note"><div class="notetop">version 0.1<button class="closenote"><i class="fas fa-times"></i></button></div></div></div>
+		</div>
+		<div class="webapp">
+			<div id="bottom">
+				<div class="sendbox">
+					<form class="formed" onsubmit="send(); return false">
+						<input autocomplete="off" class="inp" type="text" value="" id="1">
+										
+					</form>
+				</div>
+				<button class="dot" onclick="send()" style=""><i class="fas fa-paper-plane" style="magin-left:-3px;padding-left:-2px;font-size:18px;color:#9BE7C1" aria-hidden="true"></i></button>
+				<div class="heart" style="text-align:center;font-size:35px;color:rgb(89, 174, 132);"><i class="fas fa-heart" style="margin-top:7px" aria-hidden="true"></i></div>
+			</div>
+		<div class="messagebox">
+			<div class="messages">
+					<div class="message" stack="false" emote="false">Hey! This is my chat app. Its lacking a quite a few things, so don't judge it too harshly. Just click in the box below and type (press enter to send, or the send button if on computer). Messages are saved for about 10 minutes. Messages sent withing 3 second of each other merge together. You'll see. Heart button send heart icon/emoji. Have Fun!</div>
+				<div class="message self" uid="738007722" time="1585715601795" stack="true" style="background-color:rgb(109.114409266,178.162378378,143.638393822)" emote="false">lol</div><div class="message self" uid="738007722" time="1585715665288" stack="true" style="background-color:rgb(109.114409266,178.162378378,143.638393822)" emote="false">wait what</div></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		//clean up this JSON emolookup when I get the chance
+		//addMessage("Have Fun!",getCookie("uid"),Date.now()-10000,false);
+		const emolookup =  {
+			":heart:":"fas fa-heart",
+			":tp:":"fas fa-toilet-paper",
+			":trash:":"fas fa-trash",
+			":phone:":"fas fa-mobile-alt",
+			":sped:":"fab fa-accessible-icon",
+			":cash:":"fas fa-money-bill"
+		}
+		function getCookie(cook) {
+			var pos = /uid=/.exec(document.cookie).index;
+			var endpos = document.cookie.indexOf(";");
+			if(endpos==-1) {endpos=document.cookie.length;}
+			return document.cookie.substring(pos+4,endpos);
+		}
+		function addMessage(text,uid2,time,stack)
+		{
+			console.log(/:$/.test(text));
+			var newmess = document.createElement('div');
+			newmess.setAttribute('class','message');
+			var bing = document.getElementsByClassName("messages")[0].lastElementChild.getAttribute("uid");
+			var bang = document.getElementsByClassName("messages")[0].lastElementChild.getAttribute("time"); 
+			var yeet = ((bing==uid2)&&(time-bang<3000));
+			//console.log(time);
+			//console.log(bang);
+			//console.log(yeet);
+			//console.log(text);
+			newmess.append(document.createTextNode(text));
+			document.getElementsByClassName("messages")[0].appendChild(newmess);
+			newmess.setAttribute("uid",uid2);
+			newmess.setAttribute("time",time);
+			newmess.setAttribute("stack",stack);
+			newmess.setAttribute("style","background-color:"+getColor(uid2));
+			var emote = false;
+			if(/^:/.test(text)&&/:$/.test(text))
+			{
+				emote=true;
+				
+				var icon = document.createElement("i");
+				icon.className=emolookup[text];
+				icon.setAttribute('aria-hidden', 'true');
+				newmess.innerText="";
+				newmess.append(icon);
+				newmess.removeAttribute("style");
+				icon.setAttribute("style","color:"+getColor(uid2));
+			}
+			newmess.setAttribute("emote",emote);
+			var check = document.getElementsByClassName("messages")[0].lastElementChild;
+			//console.log((check.previousSibling.classList.contains("dupe"))+"//");
+			if((document.getElementsByClassName("messages")[0].childElementCount>2)) {
+			if(check.getAttribute("emote")=="true"&&check.previousSibling.getAttribute("emote")=="true"&&!check.previousSibling.classList.contains("dupe")&&check.lastElementChild.getAttribute("class")==check.previousSibling.lastElementChild.getAttribute("class"))
+			{
+				console.log("hello");
+				var size = getComputedStyle(check.previousSibling).fontSize;
+				var sizeValue = size.substring(0,size.length-2);
+				var newSize = Math.atan(sizeValue/100+0.2)*100;
+				console.log(newSize+"//"+sizeValue);
+				check.previousSibling.setAttribute("style","font-size:"+newSize+"px; transition: 0.6s;");
+				document.getElementsByClassName("messages")[0].removeChild(check);
+			}
+			if(yeet) {
+				if(document.getElementsByClassName("messages")[0].lastElementChild.previousSibling.getAttribute("stack")=="true" ) {
+				
+					document.getElementsByClassName("messages")[0].lastElementChild.classList.toggle('dupe',true);
+					
+				if((document.getElementsByClassName("messages")[0].lastElementChild.previousSibling.offsetWidth-document.getElementsByClassName("messages")[0].lastElementChild.offsetWidth>-1))
+				{
+					newmess.setAttribute("style","background-color:"+getColor(uid2));
+					if(newmess.getAttribute("emote")=="true") {newmess.lastElementChild.setAttribute("style","");}
+					
+					console.log("whatever");
+					document.getElementsByClassName("messages")[0].lastElementChild.classList.toggle('small',true);;
+					
+				}
+				}
+			}}
+			if(!document.getElementsByClassName("messages")[0].lastElementChild.classList.contains('small')&&emote)	{
+				document.getElementsByClassName("messages")[0].lastElementChild.className="love";	
+			}
+			try {
+				if(uid2==getCookie("uid"))
+					{
+						newmess.classList.toggle('self',true);
+					}
+			} catch(error) {}
+			var temp = document.getElementsByClassName("messages")[0];
+			temp.scrollBy({top: temp.getBoundingClientRect().bottom, behavior: 'smooth'});
+		}
+		function getColor(userid)
+		{
+			var id = userid/1000000000;
+			var r1 = 70;
+			var g1 = 142;
+			var b1 = 106;
+			var r2 = 123;
+			var g2 = 191;
+			var b2 = 157;
+			var r0 = (r2-r1)*id+r1;
+			var g0 = (g2-g1)*id+g1;
+			var b0 = (b2-b1)*id+b1;
+			return ("rgb("+r0+","+g0+","+b0+")");
+		}
+		document.getElementsByClassName("heart")[0].addEventListener('click',()=>sendmess(":heart:",false));
+		function add()
+		{
+			var text = document.getElementById('1');
+			addMessage(text.value);
+			text.value="";
+		}
+		function setalert(boo) {
+			if(boo&&!document.hasFocus())
+			{
+				document.getElementById("icono").href="/chat/fav2.ico";
+			} else {
+				document.getElementById("icono").href="/chat/favicon.ico";
+			}
+		}
+		document.body.addEventListener('mouseover', () => setalert(true));
+		var connection;
+		var mh;
+		function startsocket()
+		{
+			"use strict";
+			window.WebSocket = window.WebSocket || window.MozWebSocket;
+			if(!window.WebSocket) { console.log("browser doens't work on this");}
+			connection = new WebSocket('ws://gregoryt.mooo.com:80');
+			connection.onmessage = function( message) {
+				mh = JSON.parse(message.data);
+				if(mh.content!=null)
+				{	addMessage(unescape(mh.content),mh.uid,mh.time,mh.stack);
+					connection.send('{ "type":"ack" }');
+					setalert(true);
+				}
+				if(mh.usercount!=null)
+				{
+					document.getElementById("usercount").innerText=mh.usercount;
+					if(mh.usercount==1){document.getElementById("usertext").innerText='user online';} else {document.getElementById("usertext").innerText='users online';};
+				}
+				if(mh.type=='command')
+				{
+					switch(mh.command) {
+						case 'startsocket':
+							window.setTimeout(() => startsocket(), 1000);
+						break;
+					}
+				}
+				if(mh.type=='heartbeat')
+				{
+					waitingForAck = false;
+					killroom = false;
+				}
+
+				
+			}
+		}
+		var waitingForAck = false;
+		var killroom = false;
+		function check() {
+			connection.send('{ "type":"heartbeat" }');
+			if(killroom) {
+				location.reload();
+			}
+			if(waitingForAck) { killroom =waitingForAck;}
+			waitingForAck = true;
+		}
+		window.setInterval(() => check(), 5000);
+		function send()  
+		{	
+			var text3 = document.getElementById('1');
+			if(text3.value.length>0)
+			{
+				sendmess(text3.value,!(/^:/.test(text3.value)&&/:$/.test(text3.value)));
+				text3.value="";
+			}
+		}
+//window.setTimeout(() =>sendmess("connected",false),400);
+		function sendmess(text2,stack) {
+			
+			var uid=document.cookie.substring(document.cookie.indexOf("=")+1);
+			var outmessage = '{ "type":"message", "content":"'+escape(text2)+'", "uid":"0", "time":"'+Date.now()+'", "stack":"'+stack+'"}'; 
+			try {
+			
+				outmessage = '{ "type":"message", "content":"'+escape(text2)+'", "uid":"'+getCookie("uid")+'", "time":"'+Date.now()+'", "stack":"'+stack+'"}';
+			} catch(error) {
+			}
+			connection.send(outmessage);
+			text2.value="";
+		}
+//alert("test");
+		startsocket();
+		function testsnapchat() {
+			connection.send('{ "type":"history" }');
+		}
+		connection.addEventListener('open',() => testsnapchat());
+		window.setTimeout(() =>document.getElementsByClassName("messages")[0].scrollTop = document.getElementsByClassName("messages")[0].scrollHeight,600);
+		window.setTimeout(() =>document.getElementsByClassName("messages")[0].scrollTop = document.getElementsByClassName("messages")[0].scrollHeight,900);
+
+	</script>
+
+
+</body></html>

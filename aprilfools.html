@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>URGENT: San Mateo Schools to reopen</title>
+        <style>
+            body {
+                background-image: url(https://i2.wp.com/media.boingboing.net/wp-content/uploads/2015/05/tumblr_n76jf8pYLe1tre1zbo1_500.gif?resize=500%2C454);
+                color: rgb(230,230,230);
+                text-shadow: 2px 1px 5px black;
+                font-family: Impact, Charcoal, sans-serif;
+            }
+            #title {
+                font-size: 100px;
+                margin-left: 0%;
+                transition: 1s;
+            }
+            #title.other {
+                margin-left: 50%;
+                transition: 1s;
+            }
+            #content {
+                width: 100%;
+                align: center;
+                font-size: 60px;
+                font-style: bold;
+            }
+            #MO {
+                transform: rotate(2deg);
+                transition: 0.05s;
+                float: left;
+                margin-left: 30%;
+                font-size: 70px;
+                
+            }
+            #MO.other {
+                transform: rotate(-2deg);
+                transition: 0.05s;
+            }
+            #shrek {
+                margin-top: -50px;
+            }
+        </style>
+    </head>
+    <body>
+        <source src="https://upload.wikimedia.org/wikipedia/commons/5/55/Soviet_Anthem_Instrumental_1955.ogg" type="audio/ogg">
+        <div id="content">
+            <div id="title">No It's Not</div>
+            <div id="content">HAPPY APRIL FOOLS DAY<br><br><h1 id="MO">MOTHERFUCKER</h1></div>
+            <img id="shrek" src="https://thumbs.gfycat.com/SoulfulClearCoyote-max-1mb.gif" width="100%" height="auto">
+        </div>
+        <script>
+            document.getElementById("title").addEventListener('transitionend', () => document.getElementById("title").classList.toggle('other'));
+            document.getElementById("MO").addEventListener('transitionend', () => document.getElementById("MO").classList.toggle('other'));
+            window.setTimeout(() => document.getElementById("title").classList.toggle('other'),500);  
+            window.setTimeout(() => document.getElementById("MO").classList.toggle('other'),500);  
+        </script>
+        <audio autoplay="true" loop="true">
+            <source src="http://cristurm.github.io/nyan-cat/audio/nyan-cat.ogg" type="audio/ogg">
+            <source src="http://cristurm.github.io/nyan-cat/audio/nyan-cat.mp3" type="audio/mpeg">
+        </audio>
+    </body>
+</html>
